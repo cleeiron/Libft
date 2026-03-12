@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/10 19:28:52 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/12 16:49:44 by cleiron          ###   ########.fr       */
+/*   Created: 2026/03/12 17:21:27 by cleiron           #+#    #+#             */
+/*   Updated: 2026/03/12 18:19:06 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 
-#include<stdio.h>
-#include <stdlib.h>
-
-int ft_isalpha(int c)
+int ft_isascii(int c)
 {
-    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+    if(c >= 0 && c <= 127)
         return 1;
     
     else return 0;
 }
 
 /*int main ()
-
 {
-    char c = 6;
+    char c = ';';
 
-    printf("%d\n", ft_isalpha(c));
-
+    printf("%d\n", ft_isascii(c));
     return 0;
 }*/

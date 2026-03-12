@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/10 19:28:52 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/12 16:49:44 by cleiron          ###   ########.fr       */
+/*   Created: 2026/03/12 17:05:13 by cleiron           #+#    #+#             */
+/*   Updated: 2026/03/12 17:19:12 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 
-#include<stdio.h>
-#include <stdlib.h>
-
-int ft_isalpha(int c)
+int ft_isalnum(int c)
 {
-    if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
+  if((c >= 48 && c <= 57) || (c >= 65 && c <= 90)
+        || ( c >= 97 && c <= 122))
         return 1;
-    
+
     else return 0;
 }
 
 /*int main ()
-
 {
-    char c = 6;
+    char a = 'a';
+    char b = '6';
+    char c = ' ';
 
-    printf("%d\n", ft_isalpha(c));
+    printf("%d\n", ft_isalnum(a));
+    printf("%d\n", ft_isalnum(b));
+    printf("%d\n", ft_isalnum(c));
 
     return 0;
 }*/

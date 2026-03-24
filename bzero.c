@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   bzero.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/15 20:42:54 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/16 23:31:07 by cleiron          ###   ########.fr       */
+/*   Created: 2026/03/16 23:22:45 by cleiron           #+#    #+#             */
+/*   Updated: 2026/03/16 23:38:23 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-
-void *ft_memset(void *str, int value, size_t n)
+void ft_bzero(void *str, size_t n)
 {
-    unsigned char *mem;
     size_t i = 0;
+    unsigned char mem;
 
-    mem = (unsigned char*)str;
+    mem =(unsigned char*)str;
+
     while(i < n)
     {
-        mem[i] = (unsigned char)value;
+        mem[i] = '\0';
         i++;
     }
-    return mem;
-}
-
-int main ()
-
-{
-    char str[6] = "Hello";
-
-    ft_memset(str, 'c', 6);
-    printf("%s\n", str);
-
-    return 0;  
 }

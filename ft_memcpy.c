@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/15 20:42:54 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/16 23:31:07 by cleiron          ###   ########.fr       */
+/*   Created: 2026/03/17 15:52:10 by cleiron           #+#    #+#             */
+/*   Updated: 2026/03/24 17:34:23 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-
-void *ft_memset(void *str, int value, size_t n)
+void *ft_memcpy(void *src, size_t count, void *dest)
 {
-    unsigned char *mem;
+    unsigned char *s;
+    unsigned char *d;
+
+    s = (unsigned char *)src;
+    d = (unsigned char *)dest;
+
     size_t i = 0;
 
-    mem = (unsigned char*)str;
-    while(i < n)
+    while(i < count)
     {
-        mem[i] = (unsigned char)value;
+        d[i] = s[i];
         i++;
     }
-    return mem;
+    return dest;
 }
 
 int main ()
-
 {
-    char str[6] = "Hello";
+    char *src = "Hello les coupinous";
+    char *dest;
 
-    ft_memset(str, 'c', 6);
-    printf("%s\n", str);
+    ft_memcpy(src, 6, dest);
+    printf("%s\n", dest);
 
-    return 0;  
+    return 0;
 }

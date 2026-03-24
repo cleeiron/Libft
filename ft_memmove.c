@@ -1,39 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/15 20:42:54 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/16 23:31:07 by cleiron          ###   ########.fr       */
+/*   Created: 2026/03/19 15:14:18 by cleiron           #+#    #+#             */
+/*   Updated: 2026/03/24 17:34:26 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-
-void *ft_memset(void *str, int value, size_t n)
+void *ft_memmove(void *src, size_t n, void *dest)
 {
-    unsigned char *mem;
+    unsigned char *s;
+    unsigned char  *d;
+
+    s = (unsigned char *)src;
+    d = (unsigned char *)dest;
+
     size_t i = 0;
 
-    mem = (unsigned char*)str;
-    while(i < n)
+    while(s[i] != '\0')
     {
-        mem[i] = (unsigned char)value;
         i++;
     }
-    return mem;
+
+    while(i != n)
+    {
+        i--;
+    }
+
+    while(i <= n)
+    {
+        s[i] = d[i];
+        i--;
+    }
+
 }
 
 int main ()
-
 {
-    char str[6] = "Hello";
+    char *src = "Hello les coupinous";
+    char *dest;
 
-    ft_memset(str, 'c', 6);
-    printf("%s\n", str);
-
-    return 0;  
+    ft_memmove(src, 6, dest);
 }

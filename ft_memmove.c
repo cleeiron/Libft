@@ -6,18 +6,19 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 15:14:18 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/24 17:34:26 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/03/30 23:48:43 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-void *ft_memmove(void *src, size_t n, void *dest)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-    unsigned char *s;
+    const unsigned char *s;
     unsigned char  *d;
 
-    s = (unsigned char *)src;
+    s = (const unsigned char *)src;
     d = (unsigned char *)dest;
 
     size_t i = 0;
@@ -34,16 +35,21 @@ void *ft_memmove(void *src, size_t n, void *dest)
 
     while(i <= n)
     {
-        s[i] = d[i];
+        d[i] = s[i];
         i--;
     }
 
+    return dest;
 }
 
 int main ()
 {
     char *src = "Hello les coupinous";
-    char *dest;
+    char *dest = malloc(100);
 
-    ft_memmove(src, 6, dest);
+    ft_memmove(dest, src, 6);
+    printf("%s\n", dest);
+    free(dest);
+
+    return 0;
 }

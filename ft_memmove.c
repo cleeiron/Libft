@@ -6,7 +6,7 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 15:14:18 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/30 23:48:43 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/03/31 22:26:47 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,33 +23,36 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 
     size_t i = 0;
 
-    while(s[i] != '\0')
+    if(!dest || !src)
+        return NULL;
+
+    if(d < s)
     {
-        i++;
+        while(i < n)
+        {
+            d[i] = s[i];
+            i++;
+        }
     }
 
-    while(i != n)
+    else
     {
-        i--;
+        i = n;
+        while(i > 0)
+        {
+            i--;
+            d[i] = s[i];
+        }
     }
-
-    while(i <= n)
-    {
-        d[i] = s[i];
-        i--;
-    }
-
     return dest;
 }
 
 int main ()
 {
-    char *src = "Hello les coupinous";
-    char *dest = malloc(100);
+    char str[] = "Cosmic";
 
-    ft_memmove(dest, src, 6);
-    printf("%s\n", dest);
-    free(dest);
-
+    ft_memmove(str + 2, str, 4);
+    printf("%s\n", str);
+    
     return 0;
 }

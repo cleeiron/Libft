@@ -6,7 +6,7 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/16 23:22:45 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/30 22:54:02 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/04/01 17:11:23 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void ft_bzero(void *str, size_t n)
 {
-    size_t i = 0;
-    unsigned char mem;
+    unsigned char *s;
 
-    mem =(unsigned char*)str;
+    s = (unsigned char*)str;
 
-    while(i < n)
+    while(n--)
     {
-        mem[i] = '\0';
+        s[i] = 0;
         i++;
     }
 }

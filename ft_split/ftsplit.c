@@ -6,7 +6,7 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 17:12:09 by cleiron           #+#    #+#             */
-/*   Updated: 2026/05/20 17:36:22 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/05/21 13:25:41 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,32 +28,31 @@ k = position dans le mot*/
 
     while(s[i] != '\0')
     {
-        if(s[i] != c && (i == 0 || s[i -1] == c))
+        if(s[i] != c && (i == 0 || s[i - 1] == c))
             countwords++;
-        
         i++;
     }
 
-    i = 0;
-
-    tab = malloc(sizeof(char*) * (countwords + 1));
+    tab = malloc(sizeof(char *) * (countwords +1));
     if(!tab)
         return NULL;
+
+    i = 0;
 
     while(s[i] != '\0')
     {
         while(s[i] == c)
+        {
             i++;
-
+        }
         len = 0;
         while(s[i + len] != '\0' && s[i + len] != c)
             len++;
 
-        tab[j] = malloc(sizeof(char) * (len +1));
+        tab[j] = malloc(sizeof(char) * (len + 1));
         if(!tab[j])
             return NULL;
-        
-        /*copie*/
+
         k = 0;
         while(k < len)
         {
@@ -61,31 +60,12 @@ k = position dans le mot*/
             k++;
         }
         tab[j][k] = '\0';
-
-        i = i + len;
+        i = i +len;
         j++;
     }
+
     tab[j] = NULL;
+
     return tab;
-}
-int main()
-{
-    char *s1 = "Chocolat au lait";
-    char c = ' ';
-    int i = 0;
 
-    char **new;
-
-    new = ftsplit(s1, c);
-
-    while(new[i])
-    {
-        printf("%s\n", new[i]);
-        free(new[i]);
-        i++;
-    }
-
-    free(new);
-
-    return 0;
 }

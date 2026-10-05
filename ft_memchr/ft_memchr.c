@@ -6,10 +6,11 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 17:10:40 by cleiron           #+#    #+#             */
-/*   Updated: 2026/04/13 19:53:40 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:27:41 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include<stdio.h>
 
 void *ft_memchr(const void *src, int c, size_t n)
@@ -31,7 +32,7 @@ void *ft_memchr(const void *src, int c, size_t n)
     return NULL;
 }
 
-int main()
+/*int main()
 {
     int tab [] = { 6, 2, 4, 1};
 
@@ -40,4 +41,4 @@ int main()
     printf("%p\n", res);
 
     return 0;
-}
+}*/

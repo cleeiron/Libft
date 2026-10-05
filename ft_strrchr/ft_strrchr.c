@@ -6,12 +6,12 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 12:52:46 by cleiron           #+#    #+#             */
-/*   Updated: 2026/04/12 15:20:54 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:34:37 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-
+#include "libft.h"
+/*#include<stdio.h>*/
 
 char *ft_strrchr(char *str, int c)
 {
@@ -32,9 +32,9 @@ char *ft_strrchr(char *str, int c)
     return res;
 }
 
-int main ()
+/*int main ()
 {
     printf("%s\n", ft_strrchr("coucou", 'u'));
 
     return 0;
-}
+}*/

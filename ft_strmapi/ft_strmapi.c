@@ -1,35 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/15 20:24:44 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/03 16:22:24 by cleiron          ###   ########.fr       */
+/*   Created: 2026/05/23 16:32:59 by cleiron           #+#    #+#             */
+/*   Updated: 2026/09/18 15:33:44 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+/*#include<stdio.h>
+#include<stdlib.h>*/
 
-size_t ft_strlen(const char *str)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-     size_t len;
-     len = 0;
+    unsigned int i;
+    int len;
+    char *new;
 
-    while(str[len] != '\0')
+    if(!s || !f)
+        return NULL;
+
+    while(s[i] != '\0')
     {
         len++;
+        i++;
     }
-    return len;
+
+    new = malloc(sizeof(char) * (len +1));
+    if(!new)   
+        return NULL;
+    
+    i = 0;
+
+    while(s[i] != '\0')
+    {
+        new[i] =f(i, s[i]);
+        i++;
+    }
+    new[i] = '\0';
+
+    return new;
 }
-
-/*int main ()
-{
-    char str[6]= "Hello";
-
-    printf("%d\n", ft_strlen(str));
-
-    return 0;
-}*/

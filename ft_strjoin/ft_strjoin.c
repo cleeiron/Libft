@@ -6,12 +6,13 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 10:19:12 by cleiron           #+#    #+#             */
-/*   Updated: 2026/05/18 17:26:07 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:31:58 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<stdlib.h>
+#include "libft.h"
+/*#include<stdio.h>
+#include<stdlib.h>*/
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
@@ -54,7 +55,7 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (plus);
 }
 
-int main ()
+/*int main ()
 {
     char *part1 = "Aloha ";
     char *part2 = "y a du soleil !";
@@ -63,5 +64,7 @@ int main ()
 
     printf("%s\n", total);
 
+    free(total);
+
     return 0;
-}
+}*/

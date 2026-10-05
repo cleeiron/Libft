@@ -6,12 +6,13 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 19:13:18 by cleiron           #+#    #+#             */
-/*   Updated: 2026/05/17 16:36:07 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:31:30 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<stdlib.h>
+#include "libft.h"
+/*#include<stdio.h>
+#include<stdlib.h>*/
 
 char *ft_strdup(char *str)
 {
@@ -40,7 +41,7 @@ char *ft_strdup(char *str)
     return (copy);
 }
 
-int main()
+/*int main()
 {
     char *str = "aloha";
     char *duply;
@@ -48,5 +49,7 @@ int main()
     duply = ft_strdup(str);
     printf("%s\n", duply);
 
+    free(duply);
+
     return 0;
-}
+}*/

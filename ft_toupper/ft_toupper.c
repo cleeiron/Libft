@@ -6,33 +6,24 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 10:45:41 by cleiron           #+#    #+#             */
-/*   Updated: 2026/04/05 10:54:21 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/02 18:51:55 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+/*#include<stdio.h>*/
 
-char *ft_toupper(char *str)
+int ft_toupper(int c)
 {
-    int i = 0;
-    
-    while(str[i] != '\0')
+    if(c >= 97 && c <= 122)
     {
-        if(str[i] >= 97 && str[i] <= 122)
-        {
-             str[i]= str[i] -32;
-        }
-        i++;
+        c = c -32;
     }
-    return str;
+    return c;
 }
 
-int main ()
+/*int main ()
 {
-    char str[10] = "Hello";
-
-    ft_toupper(str);
-
-    printf("%s\n", str);
+    printf("%c\n", (ft_toupper('c')));
     return 0;
-}
+}*/

@@ -6,10 +6,11 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/19 15:14:18 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/31 22:26:47 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:28:26 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -47,7 +48,7 @@ void *ft_memmove(void *dest, const void *src, size_t n)
     return dest;
 }
 
-int main ()
+/*int main ()
 {
     char str[] = "Cosmic";
 
@@ -55,4 +56,4 @@ int main ()
     printf("%s\n", str);
     
     return 0;
-}
+}*/

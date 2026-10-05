@@ -6,12 +6,13 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 17:16:12 by cleiron           #+#    #+#             */
-/*   Updated: 2026/04/01 17:44:45 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:32:48 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
+/*#include <stdio.h>
+#include <stdlib.h>*/
 
 size_t ft_strlcpy(char *dest, size_t n, const char *src)
 {
@@ -37,7 +38,7 @@ size_t ft_strlcpy(char *dest, size_t n, const char *src)
     return slen;
 }
 
-int main()
+/*int main()
 {
     char dest[10] = "Cosmic";
     char *src = "hell";
@@ -46,4 +47,4 @@ int main()
 
     return 0;
 
-}
+}*/

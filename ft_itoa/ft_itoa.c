@@ -6,10 +6,11 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 13:37:24 by cleiron           #+#    #+#             */
-/*   Updated: 2026/05/22 10:53:41 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:27:26 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -60,7 +61,7 @@ char *ft_itoa(int n)
     return str;
 }
 
-int main ()
+/*int main ()
 {
     int n = -628063;
     char *str;
@@ -70,4 +71,4 @@ int main ()
 
     return 0;
 
-}
+}*/

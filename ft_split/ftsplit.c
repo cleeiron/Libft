@@ -6,12 +6,13 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 17:12:09 by cleiron           #+#    #+#             */
-/*   Updated: 2026/06/03 16:29:53 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:30:37 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include<stdio.h>
+#include "libft.h"
+/*#include<stdlib.h>
+#include<stdio.h>*/
 
 char **ftsplit(char const *s, char c)
 {
@@ -70,7 +71,7 @@ k = position dans le mot*/
     return tab;
     
 }
-int main()
+/*int main()
 {
     char *s1 = "Chocolat au lait";
     char c = ' ';
@@ -90,4 +91,4 @@ int main()
     free(new);
 
     return 0;
-}
+}*/

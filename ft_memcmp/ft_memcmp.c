@@ -6,10 +6,11 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 19:58:13 by cleiron           #+#    #+#             */
-/*   Updated: 2026/05/12 17:33:17 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:27:53 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include<stdio.h>
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)

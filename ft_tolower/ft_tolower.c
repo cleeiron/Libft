@@ -6,32 +6,26 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/08 16:55:10 by cleiron           #+#    #+#             */
-/*   Updated: 2026/04/08 17:20:34 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/02 18:47:11 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+/*#include <stdio.h>*/
 
-char *ft_tolower(char *str)
+int ft_tolower(int c)
 {
-    int i = 0;
-
-    while(str[i] != '\0')
-    {
-        if(str[i] >= 65 && str[i] <= 90)
+    if(c >= 65 && c <= 90)
         {
-            str[i] = str[i] +32;
+            c = c +32;
         }
-        i++;
-    }
-    return str;
+    return c;
 }
 
-int main()
+/*int main()
 {
-    char str[10] = "CoSmic";
 
-    printf("%s\n", (ft_tolower(str)));
+    printf("%c\n", (ft_tolower('C')));
 
     return 0;
-}
+}*/

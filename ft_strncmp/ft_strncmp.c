@@ -6,11 +6,12 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 15:35:57 by cleiron           #+#    #+#             */
-/*   Updated: 2026/04/12 17:09:49 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:34:07 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
+/*#include<stdio.h>*/
 
 int ft_strncmp(char *s1, char *s2, int n)
 {

@@ -6,10 +6,11 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/17 15:52:10 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/30 23:44:11 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:28:07 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -34,7 +35,7 @@ void *ft_memcpy(void *dest,const void *src, size_t n)
     return dest;
 }
 
-int main ()
+/*int main ()
 {
     char *src = "Hello les coupinous";
     char *dest = malloc(100);
@@ -45,4 +46,4 @@ int main ()
     free(dest);
 
     return 0;
-}
+}*/

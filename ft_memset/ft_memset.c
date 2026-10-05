@@ -6,12 +6,12 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/15 20:42:54 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/16 23:31:07 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:28:42 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
-
 
 void *ft_memset(void *str, int value, size_t n)
 {
@@ -27,7 +27,7 @@ void *ft_memset(void *str, int value, size_t n)
     return mem;
 }
 
-int main ()
+/*int main ()
 
 {
     char str[6] = "Hello";
@@ -36,4 +36,4 @@ int main ()
     printf("%s\n", str);
 
     return 0;  
-}
+}*/

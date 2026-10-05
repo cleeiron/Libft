@@ -6,10 +6,11 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 21:25:26 by cleiron           #+#    #+#             */
-/*   Updated: 2026/05/12 17:09:21 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/09/18 15:25:55 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include<stdio.h>
 
 int ft_atoi(const char *str)
@@ -38,13 +39,13 @@ int ft_atoi(const char *str)
     return result *sign;
 }
 
-int main()
+/*int main()
 {
     char *str = "--236cc";
 
     printf("%d\n", ft_atoi(str));
 
     return 0;
-}
+}*/
     
         

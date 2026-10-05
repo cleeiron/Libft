@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/15 20:24:44 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/03 16:22:24 by cleiron          ###   ########.fr       */
+/*   Created: 2026/10/02 20:39:55 by cleiron           #+#    #+#             */
+/*   Updated: 2026/10/02 20:55:52 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-size_t ft_strlen(const char *str)
+t_list *ft_lstlast(t_list *lst)
 {
-     size_t len;
-     len = 0;
+    if (lst == NULL)
+        return NULL;
 
-    while(str[len] != '\0')
+    while(lst->next != NULL)
     {
-        len++;
+        lst = lst-> next;
     }
-    return len;
+    return lst;
 }
-
-/*int main ()
-{
-    char str[6]= "Hello";
-
-    printf("%d\n", ft_strlen(str));
-
-    return 0;
-}*/

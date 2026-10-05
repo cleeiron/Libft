@@ -6,19 +6,19 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 17:05:13 by cleiron           #+#    #+#             */
-/*   Updated: 2026/03/12 17:19:12 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/03 16:23:31 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+/*#include <stdio.h>*/
 
 int ft_isalnum(int c)
 {
-  if((c >= 48 && c <= 57) || (c >= 65 && c <= 90)
-        || ( c >= 97 && c <= 122))
+  if(ft_isalpha(c) || ft_isdigit(c))
         return 1;
 
-    else return 0;
+    return 0;
 }
 
 /*int main ()

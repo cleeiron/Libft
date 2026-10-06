@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ftmemmove.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/12 17:47:49 by cleiron           #+#    #+#             */
-/*   Updated: 2026/06/12 17:48:47 by cleiron          ###   ########.fr       */
+/*   Created: 2026/10/06 15:57:10 by clpincho          #+#    #+#             */
+/*   Updated: 2026/10/06 15:58:03 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-t_list ft_listnew(void *content)
+#include <stdio.h>
+
+void *memmove(void *dest, const void *src, size_t n)
 {
-    
+	unsigned char *d;
+	const unsigned char *s;
+	
 }

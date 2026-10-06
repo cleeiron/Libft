@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/15 20:42:54 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:28:42 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/06 15:14:09 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void *ft_memset(void *str, int value, size_t n)
+void *ft_memset(void *str, int c, size_t n)
 {
     unsigned char *mem;
     size_t i = 0;
@@ -21,7 +21,7 @@ void *ft_memset(void *str, int value, size_t n)
     mem = (unsigned char*)str;
     while(i < n)
     {
-        mem[i] = (unsigned char)value;
+        mem[i] = (unsigned char)c;
         i++;
     }
     return mem;

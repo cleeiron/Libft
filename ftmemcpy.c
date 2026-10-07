@@ -1,47 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ftmemcpy.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/01 17:16:12 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/06 21:45:56 by cleiron          ###   ########.fr       */
+/*   Created: 2026/10/06 19:47:41 by cleiron           #+#    #+#             */
+/*   Updated: 2026/10/06 20:24:37 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *dest, size_t n, const char *src)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
+    unsigned char *d;
+    const unsigned char *s;
+
+    d = (unsigned char *)dst;
+    s = (const unsigned char *)src;
     size_t i = 0;
-    size_t slen = 0;
 
-    while(src[slen] != '\0')
+    while(i < n)
     {
-        slen++;
+        d[i] = s[i];
+        i++;
     }
-
-    if(n > 0)
-    {
-        while(src[i] && i < n-1)
-        {
-            dest[i] = src[i];
-            i++;
-        }
-        dest[i] = '\0';
-    }
-    
-    return slen;
+    return dest;
 }
-
-/*int main()
-{
-    char dest[10] = "Cosmic";
-    char *src = "hell";
-
-    printf("%ld\n", ft_strlcpy(dest, 5,src));
-
-    return 0;
-
-}*/

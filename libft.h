@@ -3,17 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 14:37:07 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/06 13:55:10 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/06 20:12:38 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-# define LIBFT_H
+#define LIBFT_H
 
-# include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
 
 typedef struct s_list
 {
@@ -21,7 +22,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-/* Partie 1 / fonctions de ta libft */
+
 int ft_isalpha(int c);
 int ft_isdigit(int c);
 int ft_isalnum(int c);

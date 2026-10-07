@@ -6,12 +6,11 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 21:25:26 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:25:55 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/06 20:15:01 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
 
 int ft_atoi(const char *str)
 {

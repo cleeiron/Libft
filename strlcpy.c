@@ -1,47 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   strlcpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/01 17:16:12 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/06 21:45:56 by cleiron          ###   ########.fr       */
+/*   Created: 2026/10/06 21:48:38 by cleiron           #+#    #+#             */
+/*   Updated: 2026/10/06 21:58:03 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *dest, size_t n, const char *src)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-    size_t i = 0;
-    size_t slen = 0;
+    size_t i;
+    size_t slen;
 
-    while(src[slen] != '\0')
+    i = 0;
+    slen = ft_strlen(src);
+    
+    if(dstsize > 0)
     {
-        slen++;
-    }
-
-    if(n > 0)
-    {
-        while(src[i] && i < n-1)
+        while(src[i] != '\0' && i < dstsize-1)
         {
-            dest[i] = src[i];
+            dst[i] = src[i];
             i++;
         }
-        dest[i] = '\0';
+        dst[i] = '\0';
     }
-    
     return slen;
 }
-
-/*int main()
-{
-    char dest[10] = "Cosmic";
-    char *src = "hell";
-
-    printf("%ld\n", ft_strlcpy(dest, 5,src));
-
-    return 0;
-
-}*/

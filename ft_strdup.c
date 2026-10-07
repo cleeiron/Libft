@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 19:13:18 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:31:30 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/07 17:05:55 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include<stdio.h>
-#include<stdlib.h>*/
 
 char *ft_strdup(char *str)
 {
@@ -40,16 +38,3 @@ char *ft_strdup(char *str)
     
     return (copy);
 }
-
-/*int main()
-{
-    char *str = "aloha";
-    char *duply;
-
-    duply = ft_strdup(str);
-    printf("%s\n", duply);
-
-    free(duply);
-
-    return 0;
-}*/

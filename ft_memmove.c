@@ -1,59 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ftmemmove.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/19 15:14:18 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:28:26 by cleiron          ###   ########.fr       */
+/*   Created: 2026/10/06 15:57:10 by clpincho          #+#    #+#             */
+/*   Updated: 2026/10/06 21:44:12 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void *memmove(void *dest, const void *src, size_t n)
 {
-    const unsigned char *s;
-    unsigned char  *d;
+	unsigned char *d;
+	const unsigned char *s;
+	size_t i;
 
-    s = (const unsigned char *)src;
-    d = (unsigned char *)dest;
-
-    size_t i = 0;
-
-    if(!dest || !src)
-        return NULL;
-
-    if(d < s)
-    {
-        while(i < n)
-        {
-            d[i] = s[i];
-            i++;
-        }
-    }
-
-    else
-    {
-        i = n;
-        while(i > 0)
-        {
-            i--;
-            d[i] = s[i];
-        }
-    }
-    return dest;
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if(d > s)
+	{
+		i = n;
+		while(i-- > 0)
+			d[i] = s[i];
+	}
+	else
+	{
+		i = 0;
+		while(i < n)
+		{
+			d[i] = s[i];
+			i++;	
+		}
+	}
+	return dest;
 }
-
-/*int main ()
-{
-    char str[] = "Cosmic";
-
-    ft_memmove(str + 2, str, 4);
-    printf("%s\n", str);
-    
-    return 0;
-}*/

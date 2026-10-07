@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 21:25:26 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/06 20:15:01 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/07 17:03:17 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,29 +22,20 @@ int ft_atoi(const char *str)
     while(str[i] == 127 || (str[i] >= 0 && str[i] <= 40))
         i++;
         
-    while (str[i] == '-' || str[i] == '+')
+    if((str[i] == '-' || str[i] == '+' && str[i])
+        && (str[i +1] == '-' || str[i +1] == '+'))
+        return 0;
+    else if(str[i] == '-')
     {
-        if (str[i] == '-')
-            sign = sign * -1;
+        sign = -sign;
         i++;
-    }
-        
+    }     
     while(str[i] >= 48 && str[i] <= 57)
         {
             digit = str[i] - '0';
             result = result * 10 + digit;
             i++; 
         }
-    return result *sign;
+    return result * sign;
 }
 
-/*int main()
-{
-    char *str = "--236cc";
-
-    printf("%d\n", ft_atoi(str));
-
-    return 0;
-}*/
-    
-        

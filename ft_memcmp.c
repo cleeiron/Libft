@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ftmemcmp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/13 19:58:13 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:27:53 by cleiron          ###   ########.fr       */
+/*   Created: 2026/10/06 15:24:03 by clpincho          #+#    #+#             */
+/*   Updated: 2026/10/07 16:41:10 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int memcmp(const void *s1, const void *s2, size_t n)
 {
-    size_t i = 0;
+	const unsigned char *s;
+	const unsigned char *c;
+	
+	s = (const unsigned char *)s1;
+	c = (const unsigned char *)s2;
+	
+	size_t i = 0;
 
-    const unsigned char *s;
-    const unsigned char *c;
-    s = (const unsigned char *)s1;
-    c = (const unsigned char *)s2;
-
-    while(i < n)
-    {
-        
-        if(s[i] != c[i])
-            return s[i] - c[i];
-        i++;
-    }
-    return 0;
+	while(i < n)
+	{
+		if(s[i] != c[i])
+			return s[i] - c[i];
+		i++;
+	}
+	return 0;
+	
 }

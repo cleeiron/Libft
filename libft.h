@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 14:37:07 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/06 20:12:38 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/07 16:36:29 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
 
+#include <stdlib.h>
 #include <stddef.h>
 #include <stdio.h>
+#include <bsd/string.h>
 
 typedef struct s_list
 {
@@ -34,7 +36,7 @@ void ft_bzero(void *str, size_t n);
 void *ft_memcpy(void *dest,const void *src, size_t n);
 void *ft_memmove(void *dest, const void *src, size_t n);
 size_t ft_strlcpy(char *dest, size_t n, const char *src);
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int ft_toupper(int c);
 int ft_tolower(int c);
 char *ft_strchr(char *str, int c);

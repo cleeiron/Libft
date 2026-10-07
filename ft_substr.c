@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 16:39:29 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:35:28 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/07 17:03:56 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include<stdio.h>
-#include<stdlib.h>*/
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -33,17 +31,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
     return new_s;
 }
-
-/*int main()
-{
-    char const *s = "SalutAloha";
-
-    char *new;
-
-    new = ft_substr(s, 5, 5);
-    printf("%s\n", new);
-
-    free(new);
-
-    return 0;
-}*/

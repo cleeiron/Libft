@@ -1,48 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   strlcat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/18 14:48:17 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:32:24 by cleiron          ###   ########.fr       */
+/*   Created: 2026/10/06 22:16:40 by cleiron           #+#    #+#             */
+/*   Updated: 2026/10/07 16:36:23 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <stdio.h>*/
 
-int	ft_strlen(char *str)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int	len;
+    size_t i;
+    size_t slen;
+    size_t dlen;
 
-	len = 0;
-	while (str[len] != '\0')
-	{
-		len++;
-	}
-	return (len);
-}
+    i = 0;
+    slen = ft_strlen(src);
+    dlen = ft_strlen(dst);
+    
+    if(dstsize == 0)
+        return slen;
+        
+    if(dstsize <= dlen)
+        return dstsize + slen;
+        
+    while(src[i] != '\0' && (dlen + i) < dstsize - 1)
+    {
+        dst[dlen + i] = src[i];
+        i++;
+    }
+    dst[i] = '\0';
+        
+    return dlen + slen;
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	lend;
-	unsigned int	lens;
-
-	i = 0;
-	lend = ft_strlen(dest);
-	lens = ft_strlen(src);
-	if (size == 0)
-		return (lens);
-	if (size <= lend)
-		return (size + lens);
-	while (src[i] != '\0' && (lend + i) < size -1)
-	{
-		dest[lend + i] = src[i];
-		i++;
-	}
-	dest[lend + i] = '\0';
-	return (lend + lens);
 }

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 17:10:40 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:27:41 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/07 16:50:45 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
 
 void *ft_memchr(const void *src, int c, size_t n)
 {
@@ -31,14 +30,3 @@ void *ft_memchr(const void *src, int c, size_t n)
     }
     return NULL;
 }
-
-/*int main()
-{
-    int tab [] = { 6, 2, 4, 1};
-
-    void *res = ft_memchr(tab, 4, sizeof(tab));
-
-    printf("%p\n", res);
-
-    return 0;
-}*/

@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 10:19:12 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:31:58 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/07 17:04:09 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include<stdio.h>
-#include<stdlib.h>*/
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
@@ -54,17 +52,3 @@ char *ft_strjoin(char const *s1, char const *s2)
 
     return (plus);
 }
-
-/*int main ()
-{
-    char *part1 = "Aloha ";
-    char *part2 = "y a du soleil !";
-
-    char *total = ft_strjoin(part1, part2);
-
-    printf("%s\n", total);
-
-    free(total);
-
-    return 0;
-}*/

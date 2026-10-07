@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ftmemcmp.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/06 15:24:03 by clpincho          #+#    #+#             */
-/*   Updated: 2026/10/06 15:33:14 by clpincho         ###   ########.fr       */
+/*   Created: 2026/10/07 16:32:46 by clpincho          #+#    #+#             */
+/*   Updated: 2026/10/07 16:35:23 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <stdio.h>
+#include "libft.h"
 
-int memcmp(const void *s1, const void *s2, size_t n)
+int main ()
 {
-	const unsigned char *s;
-	const unsigned char *c;
-	
-	s = (const unsigned char *)s1;
-	c = (const unsigned char *)s2;
-	
-	size_t i = 0;
-
-	while(i < n)
-	{
-		if(s[i] != c[i])
-			return s[i] - c[i];
-		i++;
-	}
-	return 0;
-	
+    printf("%ld\n", strlcat("cou", "cou", 0));
+    printf("%ld\n", ft_strlcat("cou", "cou", 0));
+     printf("%ld\n", strlcat("cou", "cou", 3));
+    printf("%ld\n", ft_strlcat("cou", "cou", 3));
+    
+    return 0;
 }

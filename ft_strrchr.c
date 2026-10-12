@@ -3,28 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 12:52:46 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/07 16:47:40 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/08 18:18:51 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(char *str, int c)
+char *ft_strrchr(const char *s, int c)
 {
-    int i = 0;
-    char *res = NULL;
+    char *lastoc = NULL;
+    int i;
 
-    while(str[i] != '\0')
+    i = 0;
+    while(s[i] != '\0')
     {
-        if(str[i] == c)
-           res = &str[i];
-        
-        if(c == '\0')
-            return &str[i];
+        if(s[i] == (unsigned char)c)
+            lastoc = (char *)&s[i];
         i++;
     }
-    return res;
+    if(c == '\0')
+        return (char *)&s[i];
+    return lastoc;
+}
+
+int main()
+{
+    char *p;
+    p = ft_strrchr("coucou", 'c');
+    printf("%p\n", p);
+    return 0;
 }

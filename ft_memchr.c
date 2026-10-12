@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 17:10:40 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/07 16:50:45 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/08 18:49:27 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,8 @@
 void *ft_memchr(const void *src, int c, size_t n)
 {
     size_t i = 0;
-
     const unsigned char *s;
-    s = (const unsigned char *)src;
-
-    if(!src)
-        return NULL;
+    s = (unsigned char *)src;
 
     while(i < n)
     {
@@ -29,4 +25,13 @@ void *ft_memchr(const void *src, int c, size_t n)
         i++;
     }
     return NULL;
+}
+
+int main ()
+{
+    char tab[] = {'A', 'B', '\0', 'C'};
+
+    char *p = ft_memchr(tab, 'D', 4);
+    printf("%c\n", *p);
+    return 0;
 }

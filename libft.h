@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 14:37:07 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/07 16:36:29 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/08 18:13:52 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdio.h>
-#include <bsd/string.h>
 
 typedef struct s_list
 {
@@ -39,8 +38,8 @@ size_t ft_strlcpy(char *dest, size_t n, const char *src);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int ft_toupper(int c);
 int ft_tolower(int c);
-char *ft_strchr(char *str, int c);
-char *ft_strrchr(char *str, int c);
+char *ft_strchr(const char *str, int c);
+char *ft_strrchr(const char *str, int c);
 int ft_strncmp(char *s1, char *s2, int n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strnstr(const char *s1, const char *s2, size_t n);

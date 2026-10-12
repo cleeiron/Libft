@@ -1,94 +1,84 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ftsplit.c                                          :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 17:12:09 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:30:37 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/12 16:06:03 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include<stdlib.h>
-#include<stdio.h>*/
 
-char **ftsplit(char const *s, char c)
+static void clean_split(char **tab, size_t numt)
 {
-     /* i = position dans s
-j = numéro du mot dans tab
-len = longueur du mot
-k = position dans le mot*/
-    char **tab;
-    int countwords;
-    int i = 0;
-    int j = 0;
-    int k = 0;
-    int len = 0;
-
-    while(s[i] != '\0')
+    while(numt > 0)
     {
-        if(s[i] == 0 || (s[i] != c && s[i-1] == c))
+        numt--;
+        free(tab[numt]);
+    }
+    free(tab);
+}
+
+char **ft_split(char const *s, char c)
+{
+    char **tab;
+    size_t i;
+    size_t numt;
+    size_t countwords;
+    size_t len;
+    
+    i = 0;
+    countwords = 0;
+    numt = 0;
+    while(s[i])
+    {
+        if(s[i] != c && (i == 0 || s[i - 1] == c))
             countwords++;
         i++;
     }
-
     tab = malloc(sizeof(char *) * (countwords +1));
     if(!tab)
         return NULL;
-
     i = 0;
-
-    while(s[i] != '\0')
+    while(s[i])
     {
-        
         while(s[i] == c)
             i++;
-            
-        len = 0;
-        while(s[i + len] != '\0' && s[i + len] != c)
+        if(s[i])
         {
-            len++;
-        }
-
-        tab[j] = malloc(sizeof(char) * (len+1));
-        if(!tab[j])
-            return NULL;
-
-        k = 0;
-        while(k < len)
-        {
-            tab[j][k] = s[i + k];
-            k++;
-        }
-        tab[j][k] = '\0';
-        i = i + len;
-        j++;
+            len = 0;
+            while(s[i + len] != '\0' && s[i + len] != c)
+                len++;
+            tab[numt] = ft_substr(s, i, len);
+            if(!tab[numt])
+            {
+                clean_split(tab, numt);
+                return NULL;
+            }  
+            i = i + len;
+            numt++; 
+        }   
     }
-    tab[j] = NULL;
-
+    tab[numt] = NULL;
     return tab;
-    
 }
-/*int main()
+int main()
 {
     char *s1 = "Chocolat au lait";
     char c = ' ';
     int i = 0;
-
     char **new;
 
-    new = ftsplit(s1, c);
-
+    new = ft_split(s1, c);
     while(new[i])
     {
         printf("%s\n", new[i]);
         free(new[i]);
         i++;
     }
-
     free(new);
-
     return 0;
-}*/
+}

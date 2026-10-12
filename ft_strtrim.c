@@ -3,64 +3,56 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:59:59 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:35:06 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/12 14:51:50 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include<stdio.h>
-#include<stdlib.h>*/
 
-int is_in_set(char c, char const *set)
+static int is_in_set(char c, char const *s)
 {
-    int i = 0;
-
-    while(set[i] != '\0')
+    size_t i;
+    
+    i = 0;
+    while(s[i])
     {
-        if(c == set[i])
-            return 1;
+        if(s[i] == c)
+            return (1);
         i++;
     }
-
     return 0;
 }
 
 char *ft_strtrim(char const *s1, char const *set)
 {
-    int end = 0;
-    int start = 0;
-    int i = 0;
+    size_t i;
+    size_t start;
+    size_t end;
     char *new;
-
     
-    while(s1[end] != '\0')
-        end++;
-    
-    while(s1[start] != '\0' && is_in_set(s1[start], set))
+    i = 0;
+    start = 0;
+    end = ft_strlen(s1);
+    while(s1[start] && (is_in_set(s1[start], set) == 1))
         start++;
-
     while(end > start && is_in_set(s1[end -1], set))
         end--;
-
-    new = malloc(sizeof(char) * (end - start +1));
-   
+    new = malloc(sizeof(char)*(end - start) +1);
     if(!new)
         return NULL;
-
-    while(start < end)
+    while(i < end - start)
     {
-        new[i] = s1[start];
+        new[i] = s1[start + i];
         i++;
-        start++;
     }
     new[i] = '\0';
     return new;
 }
 
-/*int main ()
+int main ()
 {
     char *str = "-*-aloha-**-";
     char *set = "*-";
@@ -73,4 +65,4 @@ char *ft_strtrim(char const *s1, char const *set)
 
     return 0;
     
-}*/
+}

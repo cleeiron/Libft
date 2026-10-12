@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 14:37:07 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/08 18:13:52 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/12 14:50:16 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int ft_isdigit(int c);
 int ft_isalnum(int c);
 int ft_isascii(int c);
 int ft_isprint(int c);
-size_t	ft_strlen(const char *s);
+size_t ft_strlen(const char *s);
 void *ft_memset(void *str, int value, size_t n);
 void ft_bzero(void *str, size_t n);
 void *ft_memcpy(void *dest,const void *src, size_t n);
@@ -49,7 +49,6 @@ char	*ft_strdup(const char *s);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
-int is_in_set(char c, char const *set);
 char **ft_split(char const *s, char c);
 char *ft_itoa(int n);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));

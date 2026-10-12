@@ -6,7 +6,7 @@
 /*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 20:19:35 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/07 16:52:00 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/12 17:01:02 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char *ft_strnstr(const char *s1, const char *s2, size_t n)
     if(s2[j] == '\0')
         return (char *)s1;
 
-    while(i < n && s1[i] != '\0')
+    while(i < n && s1[i])
     {
         j = 0;
         while(i+j < n && s1[i + j] == s2[j])

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 17:43:48 by cleiron           #+#    #+#             */
-/*   Updated: 2026/09/18 15:29:42 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/13 14:44:12 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void ft_putstr_fd(char *s, int fd)
 { 
+    if(!s)
+        return;
     write(fd, s, ft_strlen(s));
 }

@@ -6,7 +6,7 @@
 /*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/18 14:37:07 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/12 14:50:16 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/13 14:48:16 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int ft_isdigit(int c);
 int ft_isalnum(int c);
 int ft_isascii(int c);
 int ft_isprint(int c);
+
 size_t ft_strlen(const char *s);
 void *ft_memset(void *str, int value, size_t n);
 void ft_bzero(void *str, size_t n);

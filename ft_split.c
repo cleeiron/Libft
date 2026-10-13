@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 17:12:09 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/12 16:06:03 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/12 21:51:56 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,15 @@ static void clean_split(char **tab, size_t numt)
     free(tab);
 }
 
+static size_t count_words(char *)
+
+
+while(s[i])
+{
+    if(s[i] != c && (i == 0 || s[i - 1] == c))
+        countwords++;
+    i++;
+}
 char **ft_split(char const *s, char c)
 {
     char **tab;
@@ -31,14 +40,7 @@ char **ft_split(char const *s, char c)
     size_t len;
     
     i = 0;
-    countwords = 0;
     numt = 0;
-    while(s[i])
-    {
-        if(s[i] != c && (i == 0 || s[i - 1] == c))
-            countwords++;
-        i++;
-    }
     tab = malloc(sizeof(char *) * (countwords +1));
     if(!tab)
         return NULL;

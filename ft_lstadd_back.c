@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 20:58:06 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/15 14:16:41 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/17 15:35:53 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,9 @@ int main()
     head->next = second;
     new->next = NULL;
 
-    printf("Le premier %s\n", (char *)head->content);
-    printf("Next de head %p\n", (void *) head->next);
+    printf("Le premier : %s\n", (char *)head->content);
+    printf("Next de head : %p\n", (void *) head->next);
+    printf("Next de second : %p\n", (void *) second->next);
     printf("Le contenu du dernier maillon %s\n",
         (char *)ft_lstlast(head)->content);
 
@@ -52,6 +53,7 @@ int main()
 
     printf("Le premier %s\n", (char *)head->content);
     printf("Next de head %p\n", (void *) head->next);
+    printf("Next de second : %p\n", (void *) second->next);
     printf("Le contenu du dernier maillon %s\n",
          (char *)ft_lstlast(head)->content);
     

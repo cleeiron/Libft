@@ -6,7 +6,7 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 17:10:40 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/08 18:49:27 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/18 21:30:37 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ void *ft_memchr(const void *src, int c, size_t n)
     return NULL;
 }
 
-int main ()
+/*int main ()
 {
     char tab[] = {'A', 'B', '\0', 'C'};
 
     char *p = ft_memchr(tab, 'D', 4);
     printf("%c\n", *p);
     return 0;
-}
+}*/

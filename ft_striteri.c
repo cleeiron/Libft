@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/11 16:52:11 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/13 12:44:16 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/18 21:44:53 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void test(unsigned int i, char *str)
+/*static void test(unsigned int i, char *str)
 {
     (void)i;
     *str = (char)ft_toupper(*str);
-}
+}*/
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
     size_t i;
@@ -31,11 +31,11 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
     }
 }
 
-int main()
+/*int main()
 {
     char s[] = "Hola";
     ft_striteri(s, test);
     printf("Le resultat est %s\n", s);
     return 0;
     
-}
+}*/

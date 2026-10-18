@@ -3,33 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 17:23:03 by clpincho          #+#    #+#             */
-/*   Updated: 2026/10/17 19:01:13 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/18 22:13:05 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void print(void *content)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	printf("%s\n", (char *)content);
-}
-
-void ft_lstiter(t_list *lst, void (*f)(void *))
-{
-	if(!lst || !f)
-		return;
-	while(lst != NULL)
+	if (!lst || !f)
+		return ;
+	while (lst != NULL)
 	{
 		f(lst->content);
 		lst = lst->next;
-	}	
+	}
 }
-
-int main()
+/*int main()
 {
+	static void print(void *content)
+	{
+		printf("%s\n", (char *)content);
+	}
 	t_list *lst1;
 	t_list *lst2;
 
@@ -47,4 +45,4 @@ int main()
 	ft_lstiter(lst1, print);
 	ft_lstclear(&lst1, free);
 	return 0;
-}
+}*/

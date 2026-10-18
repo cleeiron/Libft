@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ftmemset.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 14:08:09 by clpincho          #+#    #+#             */
-/*   Updated: 2026/10/06 15:22:38 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/18 21:22:13 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *memset(void *s, int c, size_t n)
+void *ft_memset(void *s, int value, size_t n)
 {
 	unsigned char *mem;
 	size_t i = 0;
@@ -21,7 +21,7 @@ void *memset(void *s, int c, size_t n)
 
 	while(i < n)
 	{
-		mem[i] = (unsigned char)c;
+		mem[i] = (unsigned char)value;
 		i++;
 	}
 	return mem;

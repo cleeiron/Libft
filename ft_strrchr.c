@@ -6,7 +6,7 @@
 /*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/12 12:52:46 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/08 18:18:51 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/18 21:33:25 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ char *ft_strrchr(const char *s, int c)
     return lastoc;
 }
 
-int main()
+/*int main()
 {
     char *p;
     p = ft_strrchr("coucou", 'c');
     printf("%p\n", p);
     return 0;
-}
+}*/

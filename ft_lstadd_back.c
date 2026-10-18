@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 20:58:06 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/17 15:35:53 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/18 16:27:54 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
     }    
 }
 
-int main()
+/*int main()
 {
     t_list *head;
     t_list *second;
@@ -62,4 +62,4 @@ int main()
     free(new);
 
     return 0;
-}
+}*/ 

@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/23 16:32:59 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/13 12:32:35 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/18 21:42:40 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char test(unsigned int i, char c)
+/*static char test(unsigned int i, char c)
 {
     (void)i;
     return (char)ft_toupper(c);
 }
-
+*/
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
     unsigned int i;
@@ -39,7 +39,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     new[i] = '\0';
     return new;
 }
-int main ()
+/*int main ()
 {
     char *result;
 
@@ -49,4 +49,4 @@ int main ()
     printf("Le resultat est : %s\n", result);
     free(result);
     return 0;
-}
+}*/

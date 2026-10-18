@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 13:37:24 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/12 17:10:24 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/18 21:39:35 by cleiron          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char *ft_itoa(int n)
     return str;
 }
 
-int main ()
+/*int main ()
 {
     int n = -628063;
     char *str;
@@ -77,4 +77,4 @@ int main ()
     free(str);
     return 0;
 
-}
+}*/

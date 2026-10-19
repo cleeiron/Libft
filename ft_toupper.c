@@ -6,16 +6,16 @@
 /*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 10:45:41 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/17 16:39:30 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/19 16:54:57 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if(c >= 97 && c <= 122)
-        c = c -32;
-    return c;
+	if (c >= 97 && c <= 122)
+		c = c -32;
+	return (c);
 }
 

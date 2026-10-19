@@ -6,19 +6,19 @@
 /*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/02 20:39:55 by cleiron           #+#    #+#             */
-/*   Updated: 2026/10/13 17:11:06 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/19 16:05:04 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    if (lst == NULL)
-        return NULL;
-    while(lst->next != NULL)
-        lst = lst->next;
-    return lst;
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }
 
 /*int main ()

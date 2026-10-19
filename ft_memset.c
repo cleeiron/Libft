@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cleiron <cleiron@student.42.fr>            +#+  +:+       +#+        */
+/*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 14:08:09 by clpincho          #+#    #+#             */
-/*   Updated: 2026/10/18 21:22:13 by cleiron          ###   ########.fr       */
+/*   Updated: 2026/10/19 16:16:44 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memset(void *s, int value, size_t n)
+void	*ft_memset(void *s, int value, size_t n)
 {
-	unsigned char *mem;
-	size_t i = 0;
-	
-	mem =(unsigned char *)s;
+	unsigned char	*mem;
+	size_t			i;
 
-	while(i < n)
+	i = 0;
+	mem = (unsigned char *)s;
+	while (i < n)
 	{
 		mem[i] = (unsigned char)value;
 		i++;
 	}
-	return mem;
+	return (mem);
 }

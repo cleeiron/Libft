@@ -6,18 +6,16 @@
 /*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 15:18:03 by clpincho          #+#    #+#             */
-/*   Updated: 2026/10/17 17:13:28 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/19 16:01:25 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//supprimer un seul maillon, le contenu puis le maillon en lui m-eme avec free
-
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if(!lst || !del)
-		return;
+	if (!lst || !del)
+		return ;
 	del(lst->content);
 	free(lst);
 }

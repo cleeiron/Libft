@@ -6,21 +6,21 @@
 /*   By: clpincho <clpincho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 16:39:23 by clpincho          #+#    #+#             */
-/*   Updated: 2026/10/17 18:51:39 by clpincho         ###   ########.fr       */
+/*   Updated: 2026/10/19 15:57:28 by clpincho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *adress;
-	t_list *next;
-	
-	if(!del || !lst)
-		return;
+	t_list	*adress;
+	t_list	*next;
+
+	if (!del || !lst)
+		return ;
 	adress = *lst;
-	while(adress != NULL)
+	while (adress != NULL)
 	{
 		next = adress->next;
 		ft_lstdelone(adress, del);
